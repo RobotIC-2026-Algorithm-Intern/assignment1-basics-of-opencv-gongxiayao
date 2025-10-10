@@ -1,6 +1,6 @@
 import os
 current_path = os.path.abspath(os.path.dirname(__file__))
-filepath=os.path.join(current_path, '视频文件名字.avi')#放在该py文件同一目录下
+filepath=os.path.join(current_path, 'output1.avi')#放在该py文件同一目录下!!
 '''
     这是一个逐帧掩膜的调参分析的程序
     请在上方区域输入视频的文件名
@@ -41,7 +41,7 @@ except:
 result = None
 class Test():
     def __init__(self):
-        result = ''
+        self.result = 'C:\\Users\\yoyo\\Downloads\\assignment1-basics-of-opencv-gongxiayao\\res\\output.avi'  #!!
         self.root = tk.Tk()
         self.root.title('逐帧掩膜')
         self.root.geometry('500x500')
@@ -55,7 +55,7 @@ class Test():
         self.textExample = tk.Text(self.root, height=3)  # 创建文本输入框
         self.textExample.pack()  # 把Text放在window上面，显示Text这个控件
 
-        test = """
+        test ="""
     这是一个逐帧掩膜的调参分析的程序
     请在上方空白区域输入视频的 绝对路径
     之后点击运行（未知问题较为卡顿）
